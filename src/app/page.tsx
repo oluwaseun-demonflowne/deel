@@ -1,5 +1,7 @@
+import Build from "@/components/Confidence/Build";
 import Everything from "@/components/Everything/Everything";
-import Platform from "@/components/Everything/Platform";
+import Platform from "@/components/Platform/Platform";
+import Reason from "@/components/Reasons/Reason";
 
 export default function Home() {
   return (
@@ -7,8 +9,10 @@ export default function Home() {
       <div>
         <Everything />
         <div className="px-20">
-        <Platform />
+          <Platform />
         </div>
+        <Build />
+        <Reason />
       </div>
     </main>
   );

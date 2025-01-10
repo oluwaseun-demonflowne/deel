@@ -3,7 +3,7 @@ import React from "react";
 
 const Platform = () => {
   return (
-    <section className="flex items-center py-20">
+    <section className="flex items-center pt-20 pb-10">
       <div className="space-y-4 w-[50%] ">
         <h1 className="text-[#15357A] text-4xl font-bold">
           Deel’s the only HR platform with everything you need, for everyone
