@@ -1,10 +1,11 @@
 import Image from "next/image";
 import React from "react";
+import Brand from "./Brand";
 
 const Everything = () => {
   return (
-    <section className="bg-[#00AC6B] px-20  text-white ">
-      <div className="flex items-center ">
+    <section className="bg-[#00AC6B] py-10  text-white ">
+      <div className="flex items-center px-20 ">
         <div className="w-[50%] space-y-4">
           <h1 className="text-5xl font-black">
             Everything you need to scale a global team
@@ -29,11 +30,12 @@ const Everything = () => {
           />
         </div>
       </div>
-      <div className="text-center">
+      <div className="text-center space-y-10">
         <p className="">
           Used by <span className="font-bold">15,000+ businesses</span> from small startups to
           household names
         </p>
+        <Brand />
       </div>
     </section>
   );
