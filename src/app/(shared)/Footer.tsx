@@ -4,7 +4,7 @@ import { BiCopyright } from "react-icons/bi";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#15357A] space-y-4 text-white px-20 py-10">
+    <footer className="bg-[#15357A] space-y-4 text-white md:px-20 px-4 py-10">
       <Image
         className="w-10 h-4"
         src={"/logo.png"}

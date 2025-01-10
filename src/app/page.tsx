@@ -6,7 +6,7 @@ import Reason from "@/components/Reasons/Reason";
 
 export default function Home() {
   return (
-    <main className="font-brush">
+    <main className="">
         <Everything />
         <div className="px-4 md:px-20">
           <Platform />

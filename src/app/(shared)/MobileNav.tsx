@@ -115,7 +115,7 @@ const MobileNav = () => {
         id="drawer"
         className={`pt-10 flex ${
           openDrawer ? "" : "opacity-0"
-        } text-slate-400 font-brush left-0 pl-4 z-[99] flex-col top-[79px] h-screen w-fdivl backdrop-blur-lg  absolute text-xl w-[100%] font-black gap-5`}
+        } text-slate-400  left-0 pl-4 z-[99] flex-col top-[79px] h-screen w-fdivl backdrop-blur-lg  absolute text-xl w-[100%] font-black gap-5`}
       >
         {links.map((i) => (
           <div
@@ -134,7 +134,7 @@ const MobileNav = () => {
             </Link>
           </div>
         ))}
-        <div className=" text-[#3c3b3a] space-y-5  font-black font-brush  items-center">
+        <div className=" text-[#3c3b3a] space-y-5  font-black  items-center">
           <Link className="" href="">Log in</Link>
           <Link
             className="border h-12 border-[#3c3b3a] w-48 flex items-center justify-center rounded-full "
