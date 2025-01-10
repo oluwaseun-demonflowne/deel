@@ -15,10 +15,10 @@ const brands = [
 
 const Brand = () => {
   return (
-    <div className="flex px-20 space-x-14">
+    <div className="flex space-x-14">
       {brands.map((i) => (
         <Image
-        className="w-20 flex-shrink-0 h-7"
+        className="w-20 h-7"
           key={i}
           src={`/brand/${i}`}
           alt="brand names"

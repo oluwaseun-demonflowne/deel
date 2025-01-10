@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./(shared)/Navbar";
+import Footer from "./(shared)/Footer";
+import MobileNav from "./(shared)/MobileNav";
 
 const brush = localFont({
   src: "../fonts/FontMesa - Regular.otf",
@@ -22,7 +24,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${brush.variable} antialiased`}>
         <Navbar />
+        <MobileNav />
         {children}
+        <Footer />
       </body>
     </html>
   );

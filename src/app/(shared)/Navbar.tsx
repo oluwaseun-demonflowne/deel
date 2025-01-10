@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const links = ["Platform", "Use Cases", "Why Deel", "Pricing", "Resouces"];
+export const links = ["Everything", "Platform", "Trust", "Why Choose us", "Get Started"];
 
 const Navbar = () => {
   return (
-    <nav className="bg-[#00AC6B] flex px-20 font-brush  justify-between w-[100%] items-center text-white h-16">
+    <nav id="Everything" className="bg-[#00AC6B] hidden md:flex px-20 font-brush  justify-between w-[100%] items-center text-white h-16">
       <div className="flex gap-10 text-sm tracking-wide items-center">
         <Image
           className="w-10 h-4"
@@ -16,7 +16,7 @@ const Navbar = () => {
           alt="logo"
         />
         {links.map((i) => (
-          <Link key={i} href="">
+          <Link key={i} href={`#${i}`}>
             {i}
           </Link>
         ))}

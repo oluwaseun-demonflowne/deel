@@ -3,8 +3,11 @@ import React from "react";
 
 const Platform = () => {
   return (
-    <section className="flex items-center pt-20 pb-10">
-      <div className="space-y-4 w-[50%] ">
+    <section
+      id="Platform"
+      className="flex flex-col md:flex-row items-center pt-20 pb-10"
+    >
+      <div className="space-y-4 md:w-[50%] ">
         <h1 className="text-[#15357A] text-4xl font-bold">
           Deel’s the only HR platform with everything you need, for everyone
         </h1>
@@ -19,7 +22,7 @@ const Platform = () => {
           Request a demo
         </button>
       </div>
-      <div className="w-[50%]">
+      <div className="md:w-[50%]">
         <Image
           src={"/platform.png"}
           width={100}
