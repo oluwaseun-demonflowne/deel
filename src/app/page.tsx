@@ -1,9 +1,11 @@
-
+import Everything from "@/components/Everything/Everything";
 
 export default function Home() {
   return (
-    <div className="">
-      
-    </div>
+    <main className="font-brush">
+      <div>
+        <Everything />
+      </div>
+    </main>
   );
 }
