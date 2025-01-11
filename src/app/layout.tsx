@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "./(shared)/Navbar";
-import Footer from "./(shared)/Footer";
-import MobileNav from "./(shared)/MobileNav";
 import { inter } from "@/util/font";
-
-
 
 export const metadata: Metadata = {
   title: "deel.",
@@ -19,12 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
-        <MobileNav />
-        {children}
-        <Footer />
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
