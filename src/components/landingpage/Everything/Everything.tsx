@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 // import Brand from "./Brand";
-import { shimmer, toBase64 } from "../Shimmer";
+import { shimmer, toBase64 } from "../../Shimmer";
 
 const Everything = () => {
   return (

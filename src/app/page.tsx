@@ -1,11 +1,12 @@
-import Build from "@/components/Confidence/Build";
-import Everything from "@/components/Everything/Everything";
+import Build from "@/components/landingpage/Confidence/Build";
+import Everything from "@/components/landingpage/Everything/Everything";
 import GetStarted from "@/components/GetStarted";
-import Platform from "@/components/Platform/Platform";
-import Reason from "@/components/Reasons/Reason";
+import Platform from "@/components/landingpage/Platform/Platform";
+import Reason from "@/components/landingpage/Reasons/Reason";
 import MobileNav from "./(shared)/MobileNav";
 import Navbar from "./(shared)/Navbar";
 import Footer from "./(shared)/Footer";
+import Login from "@/components/Login";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Reason />
       <GetStarted />
       <Footer />
+      <Login />
     </main>
   );
 }
