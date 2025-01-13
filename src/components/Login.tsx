@@ -3,8 +3,8 @@ import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   return (
-    <div className="modal fixed bottom-0 left-0 right-0 top-0 flex h-screen items-center justify-center">
-      <div className="flex p-4 w-[400px] bg-white justify-center overflow-hidden rounded-xl">
+    <div className="modal fixed bottom-0 left-0 right-0 top-0 flex h-screen items-center max-md:px-6 justify-center">
+      <div className="flex p-7 w-[100%]  md:w-[500px] bg-white justify-center overflow-hidden rounded-xl">
         <form className="w-[100%]">
           <h1 className="text-3xl pb-4 text-center font-black">
             Log into deel
@@ -40,6 +40,10 @@ const Login = () => {
               Login to experience
             </button>
           </div>
+          <p className="text-[15px] text-center mt-6">
+            Don&apos;t have an account?{" "}
+            <span className="underline font-medium">Sign up</span>
+          </p>
         </form>
       </div>
     </div>
