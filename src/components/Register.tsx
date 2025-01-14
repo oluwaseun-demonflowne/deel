@@ -4,7 +4,7 @@ import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { IoClose } from "react-icons/io5";
 
-const Login = () => {
+const Register = () => {
   const { showRegisterModal, setShowRegisterModal } = useAuthModalState();
   if (!showRegisterModal) {
     return null;
@@ -19,16 +19,14 @@ const Login = () => {
               className="text-2xl text-slate-400"
             />
           </div>
-          <h1 className="text-3xl pb-4 text-center font-black">
+          <h1 className="text-3xl text-black pb-4 text-center font-black">
             Start your HR automation journey today
           </h1>
           <button className="flex justify-center bg-[#cecccc] w-[100%] rounded-md h-12 text-black gap-1 items-center ">
             <FcGoogle />
+            Sign in with Google
           </button>
-          <p>
-            By creating an account, you agree to deel Terms and Privacy Policy.
-          </p>
-          <div className="mt-8 space-y-4">
+          <div className="mt-8 text-black space-y-4">
             <div className="spacey-y-3">
               <label className="text-[15px] font-medium" htmlFor="email">
                 Email Address
@@ -40,29 +38,14 @@ const Login = () => {
                 placeholder="Enter your email"
               />
             </div>
-            <div className="spacey-y-3">
-              <label className="text-[15px] font-medium" htmlFor="password">
-                Password
-              </label>
-              <input
-                name="password"
-                type="password"
-                className="outline-none pl-3 border w-[100%] h-12"
-                placeholder="*********"
-              />
-            </div>
             <button className="text-[15px] text-white bg-[#00AC6B] font-medium h-12 rounded-md w-[100%]">
-              Login to experience
+              Sign up and book a session
             </button>
           </div>
-          <p className="text-[15px] text-center mt-6">
-            Don&apos;t have an account?{" "}
-            <span className="underline font-medium">Sign up</span>
-          </p>
         </form>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Register;

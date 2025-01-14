@@ -1,4 +1,5 @@
 "use client";
+import Register from "@/components/Register";
 import { useAuthModalState } from "@/store";
 import Image from "next/image";
 import Link from "next/link";
@@ -39,6 +40,7 @@ const Navbar = () => {
           Request a demo
         </button>
       </div>
+      <Register />
     </nav>
   );
 };

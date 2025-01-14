@@ -5,7 +5,8 @@ import { FcGoogle } from "react-icons/fc";
 import { IoClose } from "react-icons/io5";
 
 const Login = () => {
-  const { setShowLoginModal, showLoginModal } = useAuthModalState();
+  const { setShowLoginModal, showLoginModal, setShowRegisterModal } =
+    useAuthModalState();
   if (!showLoginModal) {
     return null;
   }
@@ -14,7 +15,10 @@ const Login = () => {
       <div className="flex p-7 w-[100%]  md:w-[500px] bg-white justify-center overflow-hidden rounded-xl">
         <form className="w-[100%]">
           <div className="flex w-full justify-end">
-            <IoClose onClick={() => setShowLoginModal(false)} className="text-2xl text-slate-400" />
+            <IoClose
+              onClick={() => setShowLoginModal(false)}
+              className="text-2xl cursor-pointer text-slate-400"
+            />
           </div>
           <h1 className="text-3xl pb-4 text-center font-black">
             Log into deel
@@ -52,7 +56,15 @@ const Login = () => {
           </div>
           <p className="text-[15px] text-center mt-6">
             Don&apos;t have an account?{" "}
-            <span className="underline font-medium">Sign up</span>
+            <span
+              onClick={() => {
+                setShowLoginModal(false);
+                setShowRegisterModal(true);
+              }}
+              className="underline font-medium"
+            >
+              Sign up
+            </span>
           </p>
         </form>
       </div>
