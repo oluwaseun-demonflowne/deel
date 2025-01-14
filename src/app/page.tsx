@@ -7,6 +7,7 @@ import MobileNav from "./(shared)/MobileNav";
 import Navbar from "./(shared)/Navbar";
 import Footer from "./(shared)/Footer";
 import Login from "@/components/Login";
+import Register from "@/components/Register";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <GetStarted />
       <Footer />
       <Login />
+      <Register />
     </main>
   );
 }

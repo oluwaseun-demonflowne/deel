@@ -7,7 +7,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { links } from "./Navbar";
 import { useAuthModalState } from "@/store";
-import Register from "@/components/Register";
 
 const MobileNav = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -135,7 +134,6 @@ const MobileNav = () => {
           >
             Request a demo
           </button>
-          <Register />
         </div>
       </div>
     </div>
