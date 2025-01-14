@@ -1,9 +1,12 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 // import Brand from "./Brand";
 import { shimmer, toBase64 } from "../../Shimmer";
+import { useAuthModalState } from "@/store";
 
 const Everything = () => {
+  const {setShowRegisterModal} = useAuthModalState()
   return (
     <section id="" className="bg-[#00AC6B] py-10  text-white ">
       <div className="flex md:flex-row flex-col items-center px-4 md:px-20 ">
@@ -16,7 +19,7 @@ const Everything = () => {
             speed and flexibility. It&apos;s global hiring, HR and payroll in
             just one system.
           </p>
-          <button className="bg-[#2c71f0] w-40 rounded-full h-10">
+          <button onClick={() => setShowRegisterModal(true)} className="bg-[#2c71f0] w-40 rounded-full h-10">
             Get Started
           </button>
         </div>
