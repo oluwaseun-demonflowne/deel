@@ -16,7 +16,7 @@ const Register = () => {
           <div className="flex w-full justify-end">
             <IoClose
               onClick={() => setShowRegisterModal(false)}
-              className="text-2xl text-slate-400"
+              className="text-2xl cursor-pointer text-slate-400"
             />
           </div>
           <h1 className="text-3xl text-black pb-4 text-center font-black">

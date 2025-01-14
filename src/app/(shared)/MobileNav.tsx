@@ -116,11 +116,20 @@ const MobileNav = () => {
           </div>
         ))}
         <div className=" text-[#3c3b3a] space-y-5  font-black  items-center">
-          <button onClick={() => setShowLoginModal(true)} className="">
+          <button
+            onClick={() => {
+              setShowLoginModal(true);
+              setOpenDrawer(false);
+            }}
+            className=""
+          >
             Log in
           </button>
           <button
-            onClick={() => setShowRegisterModal(true)}
+            onClick={() => {
+              setShowRegisterModal(true);
+              setOpenDrawer(false);
+            }}
             className="border h-12 border-[#3c3b3a] w-48 flex items-center justify-center rounded-full "
           >
             Request a demo
