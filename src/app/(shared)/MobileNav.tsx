@@ -6,32 +6,13 @@ import React, { useState } from "react";
 
 import Image from "next/image";
 import { links } from "./Navbar";
+import { useAuthModalState } from "@/store";
 
 const MobileNav = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
-  const timeline1 = gsap.timeline({
-    // repeat: -1,
-    // repeatDelay: 1,
-    // yoyo: true,
-  });
-  const timeline2 = gsap.timeline({
-    // repeat: -1,
-    // repeatDelay: 1,
-    // yoyo: true,
-  });
-
-  // useEffect(() => {
-  //   setOpenDrawer(false);
-  //   if (getCurrent.split("/")[1] === "") {
-  //     setGetId(-1);
-  //     return;
-  //   }
-  //   linkArr.map((i, index) => {
-  //     if (i.label === getCurrent.split("/")[1]) {
-  //       setGetId(index);
-  //     }
-  //   });
-  // }, [getCurrent]);
+  const { setShowLoginModal, setShowRegisterModal } = useAuthModalState();
+  const timeline1 = gsap.timeline({});
+  const timeline2 = gsap.timeline({});
 
   useGSAP(() => {
     if (openDrawer) {
@@ -135,13 +116,15 @@ const MobileNav = () => {
           </div>
         ))}
         <div className=" text-[#3c3b3a] space-y-5  font-black  items-center">
-          <Link className="" href="">Log in</Link>
-          <Link
+          <button onClick={() => setShowLoginModal(true)} className="">
+            Log in
+          </button>
+          <button
+            onClick={() => setShowRegisterModal(true)}
             className="border h-12 border-[#3c3b3a] w-48 flex items-center justify-center rounded-full "
-            href=""
           >
             Request a demo
-          </Link>
+          </button>
         </div>
       </div>
     </div>

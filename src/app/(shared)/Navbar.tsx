@@ -14,7 +14,7 @@ export const links = [
 ];
 
 const Navbar = () => {
-  const { setShowLoginModal } = useAuthModalState();
+  const { setShowLoginModal, setShowRegisterModal } = useAuthModalState();
   return (
     <nav
       id="Everything"
@@ -36,7 +36,10 @@ const Navbar = () => {
       </div>
       <div className="flex gap-6 font-brush text-sm items-center">
         <button onClick={() => setShowLoginModal(true)}>Log in</button>
-        <button className="border w-36 flex items-center justify-center rounded-full h-7">
+        <button
+          onClick={() => setShowRegisterModal(true)}
+          className="border w-36 flex items-center justify-center rounded-full h-7"
+        >
           Request a demo
         </button>
       </div>

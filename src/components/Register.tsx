@@ -1,11 +1,11 @@
 "use client";
 import { useAuthModalState } from "@/store";
 import React from "react";
-import { FcGoogle } from "react-icons/fc";
+// import { FcGoogle } from "react-icons/fc";
 import { IoClose } from "react-icons/io5";
 
 const Register = () => {
-  const { showRegisterModal, setShowRegisterModal } = useAuthModalState();
+  const { showRegisterModal,setShowLoginModal, setShowRegisterModal } = useAuthModalState();
   if (!showRegisterModal) {
     return null;
   }
@@ -22,10 +22,10 @@ const Register = () => {
           <h1 className="text-3xl text-black pb-4 text-center font-black">
             Start your HR automation journey today
           </h1>
-          <button className="flex justify-center bg-[#cecccc] w-[100%] rounded-md h-12 text-black gap-1 items-center ">
+          {/* <button className="flex justify-center bg-[#cecccc] w-[100%] rounded-md h-12 text-black gap-1 items-center ">
             <FcGoogle />
             Sign in with Google
-          </button>
+          </button> */}
           <div className="mt-8 text-black space-y-4">
             <div className="spacey-y-3">
               <label className="text-[15px] font-medium" htmlFor="email">
@@ -39,9 +39,21 @@ const Register = () => {
               />
             </div>
             <button className="text-[15px] text-white bg-[#00AC6B] font-medium h-12 rounded-md w-[100%]">
-              Sign up and book a session
+              Request demo session
             </button>
           </div>
+          <button className="text-[15px] text-black flex items-center justify-center w-full gap-1 text-center mt-6">
+            Already have an account?{" "}
+            <span
+              onClick={() => {
+                setShowLoginModal(true);
+                setShowRegisterModal(false);
+              }}
+              className="underline font-medium"
+            >
+              Sign In
+            </span>
+          </button>
         </form>
       </div>
     </div>

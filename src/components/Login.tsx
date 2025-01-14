@@ -54,7 +54,7 @@ const Login = () => {
               Login to experience
             </button>
           </div>
-          <p className="text-[15px] text-center mt-6">
+          <button className="text-[15px] flex items-center justify-center w-full gap-1 text-center mt-6">
             Don&apos;t have an account?{" "}
             <span
               onClick={() => {
@@ -65,7 +65,7 @@ const Login = () => {
             >
               Sign up
             </span>
-          </p>
+          </button>
         </form>
       </div>
     </div>
