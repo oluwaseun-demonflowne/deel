@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useAuthModalState } from "@/store";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,7 +13,7 @@ export const links = [
 ];
 
 const Navbar = () => {
-  const {setShowLoginModal,setShowRegisterModal} = useAuthModalState()
+  const { setShowLoginModal } = useAuthModalState();
   return (
     <nav
       id="Everything"
@@ -35,7 +35,7 @@ const Navbar = () => {
       </div>
       <div className="flex gap-6 font-brush text-sm items-center">
         <button onClick={() => setShowLoginModal(true)}>Log in</button>
-        <button onClick={() => setShowRegisterModal(true)} className="border w-36 flex items-center justify-center rounded-full h-7">
+        <button className="border w-36 flex items-center justify-center rounded-full h-7">
           Request a demo
         </button>
       </div>
