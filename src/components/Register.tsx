@@ -5,8 +5,8 @@ import { FcGoogle } from "react-icons/fc";
 import { IoClose } from "react-icons/io5";
 
 const Login = () => {
-  const { setShowLoginModal, showLoginModal } = useAuthModalState();
-  if (!showLoginModal) {
+  const { showRegisterModal, setShowRegisterModal } = useAuthModalState();
+  if (!showRegisterModal) {
     return null;
   }
   return (
@@ -14,15 +14,20 @@ const Login = () => {
       <div className="flex p-7 w-[100%]  md:w-[500px] bg-white justify-center overflow-hidden rounded-xl">
         <form className="w-[100%]">
           <div className="flex w-full justify-end">
-            <IoClose onClick={() => setShowLoginModal(false)} className="text-2xl text-slate-400" />
+            <IoClose
+              onClick={() => setShowRegisterModal(false)}
+              className="text-2xl text-slate-400"
+            />
           </div>
           <h1 className="text-3xl pb-4 text-center font-black">
-            Log into deel
+            Start your HR automation journey today
           </h1>
           <button className="flex justify-center bg-[#cecccc] w-[100%] rounded-md h-12 text-black gap-1 items-center ">
             <FcGoogle />
-            Sign in with Google
           </button>
+          <p>
+            By creating an account, you agree to deel Terms and Privacy Policy.
+          </p>
           <div className="mt-8 space-y-4">
             <div className="spacey-y-3">
               <label className="text-[15px] font-medium" htmlFor="email">
