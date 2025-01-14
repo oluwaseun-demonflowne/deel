@@ -1,16 +1,28 @@
 "use client";
 import { useAuthModalState } from "@/store";
-import React from "react";
+import React, { useEffect } from "react";
 // import { FcGoogle } from "react-icons/fc";
 import { IoClose } from "react-icons/io5";
 
 const Register = () => {
-  const { showRegisterModal,setShowLoginModal, setShowRegisterModal } = useAuthModalState();
+  const { showRegisterModal, setShowLoginModal, setShowRegisterModal } =
+    useAuthModalState();
+  useEffect(() => {
+    if (showRegisterModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showRegisterModal]);
   if (!showRegisterModal) {
     return null;
   }
+
   return (
-    <div className="modal  fixed bottom-0 left-0 right-0 top-0 flex h-screen items-center max-md:px-6 justify-center">
+    <div className="modal fixed bottom-0 left-0 right-0 top-0 flex h-screen items-center max-md:px-6 justify-center">
       <div className="flex p-7 w-[100%]  md:w-[500px] bg-white justify-center overflow-hidden rounded-xl">
         <form className="w-[100%]">
           <div className="flex w-full justify-end">

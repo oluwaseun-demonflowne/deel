@@ -1,12 +1,22 @@
 "use client";
 import { useAuthModalState } from "@/store";
-import React from "react";
+import React, { useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { IoClose } from "react-icons/io5";
 
 const Login = () => {
   const { setShowLoginModal, showLoginModal, setShowRegisterModal } =
     useAuthModalState();
+  useEffect(() => {
+    if (showLoginModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showLoginModal]);
   if (!showLoginModal) {
     return null;
   }
