@@ -20,7 +20,7 @@ const Opened = () => {
               <p className="font-light text-slate-700 text-[15px]">
                 {i.jobDepartment}
               </p>
-              <Link className="text-[#4098fd]" href={i.jobLink}>
+              <Link className="text-[#4098fd]" href={`/dashboard/jobs/${i.id}`}>
                 {i.jobLink}
               </Link>
             </div>
