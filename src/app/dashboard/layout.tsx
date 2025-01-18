@@ -1,5 +1,4 @@
-
-
+import Header from "@/components/Dashboard/Header";
 
 export default function RootLayout({
   children,
@@ -7,6 +6,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>{children}</div>
+    <div>
+      <Header />
+      {children}
+    </div>
   );
 }
