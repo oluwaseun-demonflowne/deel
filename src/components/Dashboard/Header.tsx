@@ -5,7 +5,7 @@ import { IoMdAddCircle } from "react-icons/io";
 
 const Header = () => {
   return (
-    <div className="flex justify-between items-center py-3 px-6">
+    <div className="hidden md:flex justify-between items-center py-3 px-6">
       <div className="flex gap-4 items-center">
         <div className="flex gap-3 items-center">
           <Image
